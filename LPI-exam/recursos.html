@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos - Examen LPIC-1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .resource-link { transition: all 0.2s ease; }
+        .resource-link:hover { transform: translateX(5px); }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-bold gradient-text">
+                            <i class="fas fa-microchip mr-2"></i>
+                            Linux Professional Institute
+                        </h1>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                        <i class="fas fa-home mr-1"></i>Inicio
+                    </a>
+                    <a href="estadisticas.html" class="text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                        <i class="fas fa-chart-bar mr-1"></i>Estadísticas
+                    </a>
+                    <a href="#" class="text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">
+                        <i class="fas fa-book mr-1"></i>Recursos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div class="px-4 py-6 sm:px-0">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold gradient-text mb-4">
+                    Recursos de Aprendizaje
+                </h1>
+                <p class="text-xl text-gray-600">
+                    Material complementario para tu preparación en LPIC-1
+                </p>
+            </div>
+
+            <!-- Quick Access -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl shadow-lg p-6 text-white card-hover">
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Comenzar Test</h3>
+                        <p class="text-blue-100 mb-4">Inicia tu sesión de práctica inmediatamente</p>
+                        <a href="index.html" class="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                            Empezar Ahora
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-green-500 to-teal-600 rounded-xl shadow-lg p-6 text-white card-hover">
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Ver Estadísticas</h3>
+                        <p class="text-green-100 mb-4">Analiza tu progreso y áreas de mejora</p>
+                        <a href="estadisticas.html" class="bg-white text-green-600 px-6 py-2 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+                            Ver Progreso
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl shadow-lg p-6 text-white card-hover">
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Descargar Guía</h3>
+                        <p class="text-purple-100 mb-4">Obtén la guía completa en PDF</p>
+                        <button onclick="downloadGuide()" class="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+                            Descargar PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Resources -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <!-- Official Documentation -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold gradient-text mb-6">
+                        <i class="fas fa-file-alt mr-2"></i>
+                        Documentación Oficial
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <a href="https://www.fsf.org/" 
+                           target="_blank" 
+                           class="resource-link flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-globe text-indigo-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <h3 class="font-semibold text-gray-900">Free Software Foundation (FSF)</h3>
+                                <p class="text-sm text-gray-600">Organización sin ánimo de lucro que promueve la libertad de los usuarios de software.</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.kernel.org/" 
+                           target="_blank" 
+                           class="resource-link flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                            <div class="flex-shrink-0">
+                                <i class="fab fa-linux text-black text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <h3 class="font-semibold text-gray-900">Kernel.org</h3>
+                                <p class="text-sm text-gray-600">El repositorio principal del núcleo del sistema operativo Linux.</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.debian.org/doc/manuals/project-history/manifesto.es.html" 
+                           target="_blank" 
+                           class="resource-link flex items-center p-4 bg-yellow-50 border-2 border-yellow-200 rounded-lg hover:bg-yellow-100 transition-colors shadow-sm">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-star text-yellow-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <h3 class="font-bold text-gray-900">El Manifiesto de Debian</h3>
+                                <p class="text-sm text-gray-800">Lectura obligatoria y base filosófica del proyecto Debian de software libre.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Learning Platforms -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold gradient-text mb-6">
+                        <i class="fas fa-graduation-cap mr-2"></i>
+                        Plataformas de Formación
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <a href="https://cursoscastraining.es/" 
+                           target="_blank" 
+                           class="resource-link flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-graduation-cap text-indigo-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <h3 class="font-semibold text-gray-900">CAS Training</h3>
+                                <p class="text-sm text-gray-600">Cursos gratuitos para personas trabajadoras y desempleadas</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.lpi.org/" 
+                           target="_blank" 
+                           class="resource-link flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                            <div class="flex-shrink-0">
+                                <i class="fab fa-linux text-black text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <h3 class="font-semibold text-gray-900">Linux Professional Institute (LPI)</h3>
+                                <p class="text-sm text-gray-600">Página oficial de la certificación y recursos formativos</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Resources -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <!-- LPIC1-101 Resources -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold gradient-text mb-6">
+                        <i class="fas fa-book-open mr-2"></i>
+                        Recursos LPIC1-101
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <a href="https://learning.lpi.org/pdfstore/LPI-Learning-Material-101-500-es.pdf" 
+                           target="_blank" 
+                           class="resource-link flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-graduation-cap text-purple-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <h3 class="font-semibold text-gray-900">Material de Estudio LPI (101-500)</h3>
+                                <p class="text-sm text-gray-600">Guía oficial de aprendizaje en español para el examen 101</p>
+                            </div>
+                        </a>
+
+                        <a href="pdfs/101/GuiadeRepaso-101.pdf" 
+                           target="_blank" 
+                           class="resource-link flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-file-pdf text-red-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <h3 class="font-semibold text-gray-900">Guía de Repaso 101</h3>
+                                <p class="text-sm text-gray-600">Documento PDF con temas clave y resúmenes</p>
+                            </div>
+                        </a>
+
+                        <a href="pdfs/101/101-Answers.pdf" 
+                           target="_blank" 
+                           class="resource-link flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-question-circle text-blue-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <h3 class="font-semibold text-gray-900">Banco de Preguntas 101</h3>
+                                <p class="text-sm text-gray-600">Preguntas de práctica resueltas para preparar el examen</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LPIC1-102 Resources -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold gradient-text mb-6">
+                        <i class="fas fa-server mr-2"></i>
+                        Recursos LPIC1-102
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <a href="https://learning.lpi.org/pdfstore/LPI-Learning-Material-102-500-es.pdf" 
+                           target="_blank" 
+                           class="resource-link flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-graduation-cap text-cyan-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <h3 class="font-semibold text-gray-900">Material de Estudio LPI (102-500)</h3>
+                                <p class="text-sm text-gray-600">Guía oficial de aprendizaje en español para el examen 102</p>
+                            </div>
+                        </a>
+
+                        <a href="pdfs/102/GuiadeRepaso-102.pdf" 
+                           target="_blank" 
+                           class="resource-link flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-file-pdf text-red-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <h3 class="font-semibold text-gray-900">Guía de Repaso 102</h3>
+                                <p class="text-sm text-gray-600">Documento PDF con temas clave del sistema y red</p>
+                            </div>
+                        </a>
+
+                        <a href="pdfs/102/102-Answers.pdf" 
+                           target="_blank" 
+                           class="resource-link flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-question-circle text-blue-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <h3 class="font-semibold text-gray-900">Banco de Preguntas 102</h3>
+                                <p class="text-sm text-gray-600">Preguntas de práctica resueltas para preparar el examen</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Study Tips -->
+            <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl shadow-lg p-8 text-white mb-12">
+                <h2 class="text-2xl font-bold mb-6">
+                    <i class="fas fa-lightbulb mr-2"></i>
+                    Consejos de Estudio
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-check-circle text-green-300 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Practica Regularmente</h3>
+                                <p class="text-indigo-100 text-sm">Realiza tests frecuentes para reforzar el conocimiento</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-clock text-yellow-300 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Gestiona el Tiempo</h3>
+                                <p class="text-indigo-100 text-sm">Practica con límite de tiempo para mejorar velocidad</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-book text-blue-300 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Revisa Fuentes</h3>
+                                <p class="text-indigo-100 text-sm">Consulta las fuentes para respuestas detalladas</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-chart-bar text-purple-300 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-1">Analiza Progreso</h3>
+                                <p class="text-indigo-100 text-sm">Identifica áreas débiles y enfócate en ellas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Support -->
+            <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+                <h2 class="text-2xl font-bold gradient-text mb-4">
+                    <i class="fas fa-question-circle mr-2"></i>
+                    ¿Necesitas Ayuda?
+                </h2>
+                <p class="text-gray-600 mb-6">
+                    Si tienes dudas sobre el contenido o encuentras errores en las preguntas, 
+                    no dudes en contactarnos.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <button onclick="showContactForm()" class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition-colors">
+                        <i class="fas fa-envelope mr-2"></i>Contactar Soporte
+                    </button>
+                    <button onclick="reportError()" class="bg-gradient-to-r from-red-500 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-colors">
+                        <i class="fas fa-bug mr-2"></i>Reportar Error
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-600">
+                    © 2024 Examen LPIC-1 Application. Desarrollado para la certificación en Linux Professional Institute.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="recursos.js"></script>
+</body>
+</html>
