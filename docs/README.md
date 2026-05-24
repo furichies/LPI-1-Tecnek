@@ -4,7 +4,7 @@ Aplicación web completa para la preparación de la certificación **LPIC-1** (L
 
 ## 🌐 Acceso a la Aplicación
 
-**URL:** [https://ricardoinstructor.github.io/CP-MOD1/](https://ricardoinstructor.github.io/CP-MOD1/)
+**URL:** [https://ricardoinstructor.github.io/LPItecnek/](https://ricardoinstructor.github.io/LPItecnek/)
 
 > ⚠️ **Nota**: Las preguntas han sido verificadas y actualizadas. Aunque se ha realizado un proceso de revisión exhaustivo, pueden existir algunos errores. Si encuentras alguna inconsistencia, por favor repórtala.
 
